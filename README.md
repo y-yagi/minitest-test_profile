@@ -4,6 +4,7 @@ Show slow test as rspec profile options.
 
 [![Build Status](https://travis-ci.org/y-yagi/minitest-test_profile.svg?branch=master)](https://travis-ci.org/y-yagi/minitest-test_profile)
 [![Gem Version](https://badge.fury.io/rb/minitest-test_profile.svg)](http://badge.fury.io/rb/minitest-test_profile)
+[![Code Climate](https://codeclimate.com/github/y-yagi/minitest-test_profile/badges/gpa.svg)](https://codeclimate.com/github/y-yagi/minitest-test_profile)
 
 ## Installation
 
