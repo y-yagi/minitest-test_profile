@@ -36,7 +36,7 @@ Options can be specified to `use!` method. Can specify options are as follows:
 
 ```ruby
 Minitest::TestProfile.use!(
-  count:  3  # The number of tests to be displayed. The default is 10.
+  count: 3  # The number of tests to be displayed. The default is 10.
 )
 ```
 
