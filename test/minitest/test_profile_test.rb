@@ -8,6 +8,7 @@ class Minitest::TestProfileTest < Minitest::Test
   end
 
   def test_display_profile
+    Minitest::TestProfile.use!
     reporter = Minitest::TestProfile::Reporter.new(@output, { count: 10 })
     reporter.start
     reporter.record(SampleTest.new(:test_normal).run)
@@ -29,6 +30,7 @@ SampleTest#test_normal
   end
 
   def test_specify_the_count
+    Minitest::TestProfile.use!
     reporter = Minitest::TestProfile::Reporter.new(@output, { count: 1 })
     reporter.start
     reporter.record(SampleTest.new(:test_normal).run)
