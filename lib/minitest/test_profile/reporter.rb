@@ -6,15 +6,17 @@ module Minitest
       def initialize(io = $stdout, options = {})
         super(io, options)
         @test_results = []
-        @count = options[:count].to_i
+        @count = options[:count]
         @calculated_total_time = nil
       end
 
       def report
+        return unless Minitest::TestProfile.use?
         display_aggregated_results
       end
 
       def record(result)
+        return unless Minitest::TestProfile.use?
         @test_results << result
       end
 
@@ -33,7 +35,7 @@ module Minitest
 
       def aggregate_slow_tests!
         @test_results.sort! { |a, b|  b.time <=> a.time }
-        @test_results = @test_results.take(@count)
+        @test_results = @test_results.take(count)
       end
 
       def slow_tests_total_time
@@ -42,6 +44,10 @@ module Minitest
 
       def ratio
         (slow_tests_total_time / @calculated_total_time) * 100
+      end
+
+      def count
+        @count || Minitest::TestProfile.count
       end
     end
   end
