@@ -43,6 +43,7 @@ module Minitest
       end
 
       def ratio
+        return 0.0 if @calculated_total_time == 0
         (slow_tests_total_time / @calculated_total_time) * 100
       end
 
