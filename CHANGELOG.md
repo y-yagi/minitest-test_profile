@@ -1,3 +1,7 @@
+## 0.2.2
+
+* Remove needless `coveralls` dependency
+
 ## 0.2.1
 
 * Prevent raising `ZeroDivisionError`
