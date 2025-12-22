@@ -4,7 +4,7 @@ class Minitest::TestProfileTest < Minitest::Test
   attr_accessor :reporter, :output
 
   def setup
-    @output = StringIO.new('')
+    @output = StringIO.new(+'')
   end
 
   def test_display_profile
