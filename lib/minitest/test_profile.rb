@@ -17,3 +17,5 @@ module Minitest
     end
   end
 end
+
+Minitest.load(:test_profile) if Minitest.respond_to?(:load)
