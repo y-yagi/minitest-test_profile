@@ -1,3 +1,8 @@
+## 0.3.0
+
+* Support minitest 6
+* Require Ruby 2.7+
+
 ## 0.2.2
 
 * Remove needless `coveralls` dependency
