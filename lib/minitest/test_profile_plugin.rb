@@ -1,4 +1,4 @@
-require "minitest/test_profile"
+require "minitest/test_profile" unless defined?(Minitest::TestProfile)
 require "minitest/test_profile/reporter"
 
 module Minitest
